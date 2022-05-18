@@ -6,7 +6,7 @@
 # Example:
 #
 # set :output, "/path/to/my/cron_log.log"
-set :output, "cron_log.log"
+set :output, "config/cron_log.log"
 
 # every 1.minute, at: '22:29 am' do
   # runner "SearchVersion.check_new_version_ruby"
@@ -14,11 +14,7 @@ set :output, "cron_log.log"
   # runner "SearchVersion.check_new_version_ruby"
 every 1.minute do
   rake 'sample:test'
-# every 2.hours do
-#   command "/usr/bin/some_great_command"
-#   runner "MyModel.some_method"
-#   rake "some:great:rake:task"
- end
+end
 #
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"
