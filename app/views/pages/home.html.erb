@@ -1,2 +1,29 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div>
+    <h4 class="mt-5 ml-5">Ruby Version Checker for <span>Ouvrages<span></h4>
+  </div>
+  <div>
+    <p>Version history</p>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>Date</th>
+            <th>Nouvelle version (o/n)</th>
+            <th>Fin support (o/n)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @versions.each do |version| %>
+          <tr>
+            <td><%= version.num_version %></td>
+            <td><%= version.date_version %></td>
+            <td>o</td>
+            <td>n</td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+  </div>
+
+<div>
